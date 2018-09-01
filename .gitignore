@@ -1,0 +1,4 @@
+.vagrant/
+node_modules/
+todo.txt
+*.log
