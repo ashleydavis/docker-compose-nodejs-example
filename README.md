@@ -4,6 +4,10 @@ An example of Nodejs and Mongodb servers built using Docker Compose
 
 Created with the help of this tutorial: https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
+Good info here as well: https://scotch.io/tutorials/create-a-mean-app-with-angular-2-and-docker-compose
+
+Good example here of loading a database fixture: https://stackoverflow.com/a/33397913/25868
+
 And my previous docker example: https://github.com/ashleydavis/docker-compose-basic-example
 
 ## To run the Node.js server on your dev pc:
