@@ -18,6 +18,8 @@ Now run the server:
 
 Now navigate your browser to http://127.0.0.1:3000/ to view the app.
 
+To view the REST API navigate your browser to http://127.0.0.1:3000/data.
+
 ## Running the Docker image in the Vagrant VM
 
 Ensure you have VirtualBox and Vagrant installed.
@@ -47,6 +49,10 @@ Then run Docker Compose:
     sudo docker-compose up -d
 
 The -d parameter starts it detatched from the command line.
+
+To rebuild image (say after changing the code):
+
+    sudo docker-compose up --build -d
 
 To list running containers:
 

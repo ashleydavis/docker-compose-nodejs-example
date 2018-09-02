@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ashleydavis/docker-compose-nodejs-example#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongodb": "^3.1.4"
   }
 }
