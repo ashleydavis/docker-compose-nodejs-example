@@ -46,4 +46,12 @@ Then run Docker Compose:
 
     sudo docker-compose up -d
 
-The -d parameter starts it as a daemon.
+The -d parameter starts it detatched from the command line.
+
+To list running containers:
+
+    sudo docker-compose ps
+
+To kill the containers:
+
+    sudo docker-compose kill
