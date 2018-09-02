@@ -18,7 +18,7 @@ Now run the server:
 
 Now navigate your browser to http://127.0.0.1:3000/ to view the app.
 
-## Building and running the Docker image in the Vagrant VM
+## Running the Docker image in the Vagrant VM
 
 Ensure you have VirtualBox and Vagrant installed.
 
@@ -33,3 +33,17 @@ Or run the batch file to record the log to a file:
 This starts an Ubuntu VM, installs Docker and Docker Compose, then automatically runs `docker-compose up` to start the system.
 
 At the end you should be able to browse to http://localhost:3000 on your **dev workstation** and see the web page it produces.
+
+After you reboot the Vagrant VM the system will no longer be running. To restart it, first shell in:
+
+    vagrant ssh
+
+Then change to the shared directory:
+
+    cd /vagrant
+
+Then run Docker Compose:
+
+    sudo docker-compose up -d
+
+The -d parameter starts it as a daemon.
