@@ -14,9 +14,10 @@ And my previous docker example: https://github.com/ashleydavis/docker-compose-ba
 
 Clone or download this repo, open a command line, change to the repo directory, then install dependencies:
 
+    > cd web
     > npm install
 
-Now run the server:
+Then run the server:
 
     > npm start
 
