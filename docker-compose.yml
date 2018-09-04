@@ -1,7 +1,8 @@
-version: '3'
+version: '3.3'
 services:
   web:
     build: ./web
+    container_name: web
     volumes:
      - ./persist:/persist:Z
     ports:
@@ -9,12 +10,18 @@ services:
     depends_on:
      - db
      - db-fixture
+    restart: always
   db:
-    build: ./db
+    image: mongo
+    container_name: db
+    volumes:
+     - ./persist/data:/data:Z
     ports:
      - "27017:27017"
+    restart: always
   db-fixture:
     build: ./db-fixture
+    container_name: db-fixture
     links:
       - db
     depends_on:
