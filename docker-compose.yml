@@ -2,13 +2,20 @@ version: '3'
 services:
   web:
     build: ./web
+    volumes:
+     - ./persist:/persist:Z
     ports:
      - "3000:3000"
+    depends_on:
+     - db
+     - db-fixture
   db:
-    image: mongo
+    build: ./db
     ports:
      - "27017:27017"
   db-fixture:
     build: ./db-fixture
     links:
+      - db
+    depends_on:
       - db

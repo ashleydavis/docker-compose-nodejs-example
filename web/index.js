@@ -2,6 +2,7 @@
 
 const express = require('express');
 const mongodb = require('mongodb');
+const fs = require('fs');
 
 // Constants
 const PORT = 3000;
@@ -57,3 +58,4 @@ main()
         console.error(err && err.stack || err);
     });
 
+fs.writeFileSync("/persist/example.txt", "This is an example of data generated in the container that is persisted.");

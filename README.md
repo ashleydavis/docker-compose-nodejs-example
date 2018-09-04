@@ -66,3 +66,7 @@ To list running containers:
 To kill the containers:
 
     sudo docker-compose kill
+
+## Resources
+
+https://medium.freecodecamp.org/the-ups-and-downs-of-docker-compose-how-to-run-multi-container-applications-bf7a8e33017e
