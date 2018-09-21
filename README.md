@@ -77,7 +77,20 @@ For example, the db container:
 
     sudo docker exec -it db bash
 
+## How to delete all docker containers and images
+
+Warning don't try this at home kids:
+
+    #!/bin/bash
+    # Delete all containers
+    sudo docker rm $(sudo docker ps -a -q)
+    # Delete all images
+    sudo docker rmi $(sudo docker images -q)
+
+Source: https://techoverflow.net/2013/10/22/docker-remove-all-images-and-containers/
+
 ## Resources
 
 https://medium.freecodecamp.org/the-ups-and-downs-of-docker-compose-how-to-run-multi-container-applications-bf7a8e33017e
 https://developer.okta.com/blog/2017/10/11/developers-guide-to-docker-part-3
+

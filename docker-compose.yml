@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3'
 services:
   web:
     build: ./web
@@ -6,7 +6,7 @@ services:
     volumes:
      - ./persist:/persist:Z
     ports:
-     - "3000:3000"
+     - "3000:80"
     depends_on:
      - db
      - db-fixture
