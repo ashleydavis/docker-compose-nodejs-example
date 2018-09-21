@@ -89,6 +89,10 @@ Warning don't try this at home kids:
 
 Source: https://techoverflow.net/2013/10/22/docker-remove-all-images-and-containers/
 
+## View logs from containers
+
+    sudo docker-compose logs
+
 ## Resources
 
 https://medium.freecodecamp.org/the-ups-and-downs-of-docker-compose-how-to-run-multi-container-applications-bf7a8e33017e
