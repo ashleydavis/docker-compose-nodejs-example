@@ -12,14 +12,16 @@ And my previous docker example: https://github.com/ashleydavis/docker-compose-ba
 
 ## To run the Node.js server on your dev pc:
 
+PRE-REQ: You need MongoDB installed to run this directly on your dev PC.
+
 Clone or download this repo, open a command line, change to the repo directory, then install dependencies:
 
-    > cd web
-    > npm install
+    cd web
+    npm install
 
 Then run the server:
 
-    > npm start
+    npm start
 
 Now navigate your browser to http://127.0.0.1:3000/ to view the app.
 
@@ -31,11 +33,11 @@ Ensure you have VirtualBox and Vagrant installed.
 
 Bring the VM up:
 
-    > vagrant up
+    vagrant up
 
 Or run the batch file to record the log to a file:
 
-    > up.bat
+    vm-up.bat
 
 This starts an Ubuntu VM, installs Docker and Docker Compose, then automatically runs `docker-compose up` to start the system.
 
@@ -98,7 +100,7 @@ Source: https://techoverflow.net/2013/10/22/docker-remove-all-images-and-contain
 - Create a Linux VM.
 - Open/map/allow end points.
 - Clone this repo to the VM.
-- Run the script linux-provision-vm.sh inside the VM.
+- Run the script vagrant-provision-vm.sh inside the VM.
 - You now have a running microservices system.
 
 Note: This won't get you a production ready system. I'm still trying to figure out how to do that with Kubernetes.
