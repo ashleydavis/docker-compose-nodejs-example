@@ -1,1 +1,1 @@
-sudo docker-compose up --build 2>&1 | tee system.log
+sudo docker-compose up --build -d 2>&1 | tee system.log

@@ -5,8 +5,8 @@ const mongodb = require('mongodb');
 const fs = require('fs');
 
 // Constants
-const PORT = 3000;
-const HOST = '0.0.0.0';
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || "0.0.0.0";
 
 // App
 const app = express();
@@ -27,14 +27,15 @@ const app = express();
 
 async function main() {
 
-    const client = await mongodb.MongoClient.connect("mongodb://db:27017");
+    const dbHost = process.env.DBHOST || "mongodb://localhost:27017";
+    const client = await mongodb.MongoClient.connect(dbHost);
     const db = client.db("mydb");
 
-    app.get('/', (req, res) => {
+    app.get("/", (req, res) => {
         res.send('Hello world\n');
     });
 
-    app.get('/data', (req, res) => {
+    app.get("/data", (req, res) => {
         const collection = db.collection("mycollection");
         collection.find().toArray()
             .then(data => {
@@ -48,7 +49,7 @@ async function main() {
             });
     });
 
-    await startServer();    
+    await startServer();
 }
 
 main() 
@@ -58,4 +59,7 @@ main()
         console.error(err && err.stack || err);
     });
 
-fs.writeFileSync("/persist/example.txt", "This is an example of data generated in the container that is persisted.");
+//
+// Uncomment this code to test writing to a peristant directory within a Docker container.
+//
+//fs.writeFileSync("/persist/example.txt", "This is an example of data generated in the container that is persisted.");

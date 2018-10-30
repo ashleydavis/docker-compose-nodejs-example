@@ -93,6 +93,16 @@ Source: https://techoverflow.net/2013/10/22/docker-remove-all-images-and-contain
 
     sudo docker-compose logs
 
+## Getting it running on Linux
+
+- Create a Linux VM.
+- Open/map/allow end points.
+- Clone this repo to the VM.
+- Run the script linux-provision-vm.sh inside the VM.
+- You now have a running microservices system.
+
+Note: This won't get you a production ready system. I'm still trying to figure out how to do that with Kubernetes.
+
 ## Resources
 
 https://medium.freecodecamp.org/the-ups-and-downs-of-docker-compose-how-to-run-multi-container-applications-bf7a8e33017e

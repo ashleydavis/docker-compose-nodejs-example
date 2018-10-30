@@ -32,6 +32,5 @@ docker-compose --version
 
 cd /vagrant
 mkdir ./persist
-mkdir ./persist/data
-mkdir ./persist/data/db
+
 sudo docker-compose up --build -d
