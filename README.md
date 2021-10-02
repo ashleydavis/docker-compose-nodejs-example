@@ -10,6 +10,8 @@ Good example here of loading a database fixture: https://stackoverflow.com/a/333
 
 And my previous docker example: https://github.com/ashleydavis/docker-compose-basic-example
 
+[Click here to support my work](https://www.codecapers.com.au/about#support-my-work)
+
 ## To run the Node.js server on your dev pc:
 
 PRE-REQ: You need MongoDB installed to run this directly on your dev PC.
